@@ -1,0 +1,121 @@
+main {
+    text-align: center;
+    border: 0.5px solid rgb(174, 182, 189);
+    box-shadow: 8px 8px 10px #000000;
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0, 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+}
+
+main:hover {
+    scale: 1.1;
+    background-color: rgba(83, 146, 255, 0.2);
+    box-shadow: 20px 20px 20px #000000c0;
+}
+
+main::selection {
+    background-color: #000000;
+}
+
+input {
+    width: 258px;
+    height: 36px;
+    border: 2px;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+
+button {
+    color: white;
+    font-weight: 500;
+    height: 36px;
+    width: 268px;
+    border-radius: 10px;
+    background-color: rgb(108, 152, 255);
+    border: 1px;
+}
+
+#facebook {
+    height: 15px;
+    padding-right: 5px;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1684724295498-399ad5f4fa48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=854&q=80);
+    background-size: cover;
+}
+
+.or {
+    text-align: center;
+    font-size: small;
+    color: #393838;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.outer2 {
+    display: inline;
+}
+
+.outer {
+    display: inline-block;
+}
+
+#forgot {
+    font-size: smaller;
+}
+
+footer {
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    border: 0.5px solid rgb(174, 182, 189);
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    backdrop-filter: blur(10px);
+}
+
+#app {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#get1 {
+    width: 120px;
+}
+
+select {
+    border: none;
+}
+
+#get2 {
+    width: 120px;
+    height: 39px;
+    border-radius: 5px;
+}
+
+#imgs {
+    display: inline-block;
+    margin-left: 42%;
+}
+
+.botom {
+    text-align: center;
+    color: white;
+}
+
+#foot {
+    margin-top: 100px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
