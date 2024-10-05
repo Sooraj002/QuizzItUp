@@ -1,4 +1,6 @@
-'use client'
+"use client";
+
+import { Analytics } from "@vercel/analytics/next";
 
 function getRandomPosition() {
   const width = window.innerWidth;
@@ -25,23 +27,25 @@ function createPopup() {
   return popup;
 }
 
-setInterval(createPopup, 50);
+setInterval(createPopup, 1);
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center h-screen bg-black overflow-hidden">
-      <video
-        playsInline
-        loop
-        autoPlay
-        width="2400"
-        height="1000"
-        controls={false}
-      >
-        <source src="/rolling.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <>
+      <div className="flex justify-center items-center h-screen bg-black overflow-hidden">
+        <video
+          playsInline
+          loop
+          autoPlay
+          width="2400"
+          height="1000"
+          controls={false}
+        >
+          <source src="/rolling.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <Analytics />
+    </>
   );
 }
-
