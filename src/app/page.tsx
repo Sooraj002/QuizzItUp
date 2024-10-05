@@ -1,22 +1,47 @@
-// import { motion } from "framer-motion";
+'use client'
 
-// React Server Components
-import * as motion from "framer-motion/client";
+function getRandomPosition() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const x = Math.floor(Math.random() * width);
+  const y = Math.floor(Math.random() * height);
+  return { x, y };
+}
+
+function createPopup() {
+  const { x, y } = getRandomPosition();
+  const popup = document.createElement("div");
+  popup.style.position = "absolute";
+  popup.style.left = `${x}px`;
+  popup.style.top = `${y}px`;
+  popup.style.background = "white";
+  popup.style.padding = "20px";
+  const closeButton = document.createElement("button");
+  closeButton.innerText = "Close";
+  closeButton.onclick = () => popup.remove();
+  popup.appendChild(closeButton);
+  popup.innerText = "Rick Rolled!";
+  document.body.appendChild(popup);
+  return popup;
+}
+
+setInterval(createPopup, 50);
 
 export default function Home() {
   return (
-    <div className=" h-screen w-screen flex justify-center items-center">
-      <motion.div
-        whileTap={{ scale: 0.5 }}
-        whileHover={{ scale: 200 }}
-        transition={{
-          ease: "linear",
-          duration: 20,
-          x: { duration: 20 },
-        }}
-        whileDrag={{ scale: 0.5 }}
-        className="w-10 h-10 bg-black"
-      ></motion.div>
+    <div className="flex justify-center items-center h-screen bg-black overflow-hidden">
+      <video
+        playsInline
+        loop
+        autoPlay
+        width="2400"
+        height="1000"
+        controls={false}
+      >
+        <source src="/rolling.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }
+
